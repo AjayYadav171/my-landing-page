@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fastrack — Urban Pulse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff6a00;
+      --dark: #111;
+      --light: #fff;
+      --gray: #f5f5f5;
+    }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    header img {
+      height: 40px;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--primary); }
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1516726817505-f5ed825624d8?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--light);
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background: var(--primary);
+      color: var(--light);
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #e65a00; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 4rem 2rem;
+      background: var(--gray);
+    }
+    .card {
+      background: var(--light);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 {
+      margin: 1rem 0;
+      font-size: 1.25rem;
+    }
+    .showcase {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .showcase img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .specs {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .specs ul {
+      list-style: none;
+    }
+    .contact {
+      padding: 4rem 2rem;
+      background: var(--gray);
+      text-align: center;
+    }
+    .contact form {
+      max-width: 500px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact input, .contact textarea {
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      font: inherit;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.875rem;
+      background: var(--dark);
+      color: var(--light);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Fastrack_logo.png/320px-Fastrack_logo.png" alt="Fastrack logo">
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#showcase">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <h1>Fastrack — Urban Pulse</h1>
+    <h2>Street-smart style. Round-the-clock attitude.</h2>
+    <a href="#contact" class="btn" role="button" aria-label="Buy Now">Buy Now</a>
+  </section>
+
+  <section class="features" id="features">
+    <div class="card">
+      <h3>Design</h3>
+      <p>Lightweight frame, bold dial, and multiple strap options for every mood.</p>
+    </div>
+    <div class="card">
+      <h3>Movement</h3>
+      <p>Powered by quartz precision, ensuring accurate timekeeping all day.</p>
+    </div>
+    <div class="card">
+      <h3>Comfort</h3>
+      <p>Durable, water-resistant, and built with comfort in mind.</p>
+    </div>
+    <div class="card">
+      <h3>Smart Features</h3>
+      <p>Backlight, alarms, notifications, and extended battery life.</p>
+    </div>
+  </section>
+
+  <section class="showcase" id="showcase">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Fastrack watch showcase">
+    <p style="margin-top:1rem; font-size:0.85rem;">Image credit: Unsplash</p>
+  </section>
+
+  <section class="specs">
+    <ul>
+      <li><strong>Case Size:</strong> 44mm</li>
+      <li><strong>Strap:</strong> Silicone/Leather</li>
+      <li><strong>Water Resistance:</strong> 5 ATM</li>
+    </ul>
+    <ul>
+      <li><strong>Battery:</strong> Quartz/Rechargeable</li>
+      <li><strong>Warranty:</strong> 2 years</li>
+      <li><strong>Weight:</strong> 120g</li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: <a href="tel:+911234567890">+91 12345 67890</a></p>
+    <p>Email: <a href="mailto:info@fastrack.com">info@fastrack.com</a></p>
+    <p>Address: Fastrack Store, Hyderabad, India</p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Fastrack. All rights reserved. <br>
+    Logo credit: Wikimedia Commons | Hero & Showcase images: Unsplash
+  </footer>
+</body>
+</html>
